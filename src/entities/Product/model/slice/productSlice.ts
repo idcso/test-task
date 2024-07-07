@@ -12,6 +12,9 @@ export const productSlice = createSlice({
     setProducts: (state, action: PayloadAction<Product[]>) => {
       state.data = action.payload;
     },
+    addProduct: (state, action: PayloadAction<Product>) => {
+      state.data?.push(action.payload);
+    },
   },
 });
 

@@ -5,56 +5,64 @@
       "name": "ProductName 1",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "active"
     },
     {
       "id": "2",
       "name": "ProductName 2",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "active"
     },
     {
       "id": "3",
       "name": "ProductName 3",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "archive"
     },
     {
       "id": "4",
       "name": "ProductName 4",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "active"
     },
     {
       "id": "5",
       "name": "ProductName 5",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "active"
     },
     {
       "id": "6",
       "name": "ProductName 6",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "archive"
     },
     {
       "id": "7",
       "name": "ProductName 7",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "archive"
     },
     {
       "id": "8",
       "name": "ProductName 8",
       "description": "",
       "image": "",
-      "price": 4321
+      "price": 4321,
+      "status": "active"
     }
   ]
 }

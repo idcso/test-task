@@ -1,10 +1,11 @@
 import { getProductsData, initializeProducts } from '@/entities/Product';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { ProductsTable } from '@/widgets/ProductsTable';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { TableTemplate } from './TableTemplate';
+import { columns } from './Columns';
 
-export const ProductsPage = () => {
+export const ProductsTable = () => {
   const products = useSelector(getProductsData);
   const dispatch = useAppDispatch();
 
@@ -17,8 +18,8 @@ export const ProductsPage = () => {
   }
 
   return (
-    <div>
-      <ProductsTable />
+    <div className="container mx-auto py-10">
+      <TableTemplate data={products} columns={columns} />
     </div>
   );
 };

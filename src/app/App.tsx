@@ -2,7 +2,7 @@ import { AppRouter } from '@/app/providers/router';
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-slate-800 h-screen">
       <AppRouter />
     </div>
   );
