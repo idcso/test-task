@@ -1,9 +1,9 @@
-import { Button } from '@/shared/ui/button';
+import { AppRouter } from '@/app/providers/router';
 
 const App = () => {
   return (
     <div>
-      <Button>Click me</Button>
+      <AppRouter />
     </div>
   );
 };
