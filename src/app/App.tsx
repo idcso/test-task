@@ -1,5 +1,11 @@
+import { Button } from '@/shared/ui/button';
+
 const App = () => {
-  return <div>test</div>;
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
 };
 
 export default App;
