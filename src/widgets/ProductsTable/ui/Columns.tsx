@@ -1,4 +1,5 @@
 import { Product } from '@/entities/Product';
+import { DeleteProduct } from '@/features/DeleteProduct';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Button } from '@/shared/ui/button';
 import {
@@ -16,11 +17,20 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: 'image',
     header: () => <div className="text-center">Image</div>,
-    cell: ({ row }) => (
-      <div className="flex justify-center">
-        <img src={row.getValue('image')} alt="image" />
-      </div>
-    ),
+    cell: ({ row }) => {
+      const images = row.getValue('image');
+      return (
+        <div className="flex flex-wrap justify-center gap-2">
+          {Array.isArray(images) && images.length !== 0 ? (
+            images.map((image) => (
+              <img src={image} alt="image" className="w-10 h-10" key={image} />
+            ))
+          ) : (
+            <div>no image provided</div>
+          )}
+        </div>
+      );
+    },
   },
   {
     accessorKey: 'name',
@@ -70,7 +80,9 @@ export const columns: ColumnDef<Product>[] = [
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Delete</DropdownMenuItem>
+              <DropdownMenuItem>
+                <DeleteProduct id={product.id} />
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

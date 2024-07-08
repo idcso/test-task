@@ -1,3 +1,9 @@
+import { CreateForm } from '@/features/CreateNewProduct';
+
 export const CreateProductPage = () => {
-  return <div>CREATE PRODUCT PAGE</div>;
+  return (
+    <div className="h-screen grid place-items-center">
+      <CreateForm />
+    </div>
+  );
 };

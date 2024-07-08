@@ -3,13 +3,11 @@ import axios from 'axios';
 import { productActions } from '../../slice/productSlice';
 import { Product } from '../../types/product';
 
-export const initializeProducts = () => {
+export const deleteProduct = (id: string) => {
   return async (dispatch: AppDispatch) => {
     try {
-      const products = await axios.get<Product[]>(
-        'http://localhost:3000/products'
-      );
-      dispatch(productActions.setProducts(products.data.reverse()));
+      await axios.delete<Product>(`http://localhost:3000/products/${id}`);
+      dispatch(productActions.filterProducts(id));
     } catch (error) {
       console.log(error);
     }
